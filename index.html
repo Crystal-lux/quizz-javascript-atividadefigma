@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - Lógica de Programação JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <header>
+            <h1>Quiz de Lógica em JavaScript</h1>
+            <p>Selecione a melhor resposta para cada pergunta!</p>
+        </header>
+
+        <form id="quiz-form">
+            <!-- Pergunta 1 -->
+            <div class="question-block">
+                <p class="question-text">1. Qual a principal diferença entre as variáveis declaradas com <code>let</code> e <code>const</code>?</p>
+                <label><input type="radio" name="q1" value="A" required> O valor de <code>let</code> pode ser alterado depois, enquanto o de <code>const</code> é fixo.</label>
+                <label><input type="radio" name="q1" value="B"> Ambas são idênticas, mas o <code>const</code> roda mais rápido no navegador.</label>
+                <label><input type="radio" name="q1" value="C"> O <code>let</code> só aceita números e o <code>const</code> só aceita textos (strings).</label>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question-block">
+                <p class="question-text">2. O que significa uma variável com o valor ou tipo <code>undefined</code> em JavaScript?</p>
+                <label><input type="radio" name="q2" value="A" required> Significa que ocorreu um erro grave de sintaxe e o código parou.</label>
+                <label><input type="radio" name="q2" value="B"> Significa que a variável foi criada (declarada), mas ainda não recebeu nenhum valor.</label>
+                <label><input type="radio" name="q2" value="C"> Significa que o valor inserido na variável é igual a zero.</label>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question-block">
+                <p class="question-text">3. Para que serve o operador aritmético de resto da divisão (<code>%</code>)?</p>
+                <label><input type="radio" name="q3" value="A" required> Ele calcula a porcentagem de desconto de um produto ou serviço.</label>
+                <label><input type="radio" name="q3" value="B"> Ele divide dois números e arredonda o resultado para cima.</label>
+                <label><input type="radio" name="q3" value="C"> Retorna o resto de uma divisão inteira, muito usado para testar se números são pares ou ímpares.</label>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question-block">
+                <p class="question-text">4. Qual a diferença prática entre os comparadores de igualdade <code>==</code> e <code>===</code>?</p>
+                <label><input type="radio" name="q4" value="A" required> O <code>==</code> compara apenas o valor; o <code>===</code> compara de forma estrita o valor e o tipo do dado.</label>
+                <label><input type="radio" name="q4" value="B"> O <code>==</code> atribui um valor à variável, enquanto o <code>===</code> apaga a variável.</label>
+                <label><input type="radio" name="q4" value="C"> O comparador <code>===</code> serve exclusivamente para testar valores booleanos.</label>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question-block">
+                <p class="question-text">5. Qual função nativa podemos utilizar para adicionar de forma simples um novo elemento no fim de um array?</p>
+                <label><input type="radio" name="q5" value="A" required> <code>.pop()</code></label>
+                <label><input type="radio" name="q5" value="B"> <code>.push()</code></label>
+                <label><input type="radio" name="q5" value="C"> <code>.shift()</code></label>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question-block">
+                <p class="question-text">6. Quando as linhas de código contidas dentro do bloco estrutural do <code>else</code> serão executadas?</p>
+                <label><input type="radio" name="q6" value="A" required> Sempre que o código terminar de rodar por completo.</label>
+                <label><input type="radio" name="q6" value="B"> Logo após o término de um laço de repetição <code>for</code>.</label>
+                <label><input type="radio" name="q6" value="C"> Apenas quando todas as condições lógicas anteriores (<code>if</code> / <code>else if</code>) forem falsas.</label>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="question-block">
+                <p class="question-text">7. Quais são as três partes fundamentais encontradas na declaração padrão de um laço <code>for</code>?</p>
+                <label><input type="radio" name="q7" value="A" required> Início (inicialização), condição de parada e incremento (passo).</label>
+                <label><input type="radio" name="q7" value="B"> Função de entrada, bloco interno de códigos e o comando de retorno.</label>
+                <label><input type="radio" name="q7" value="C"> Declaração de string, checagem com typeof e cálculo de resto.</label>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="question-block">
+                <p class="question-text">8. Por que é vantajoso utilizar funções na estruturação de projetos?</p>
+                <label><input type="radio" name="q8" value="A" required> Porque elas transformam automaticamente variáveis em constantes.</label>
+                <label><input type="radio" name="q8" value="B"> Permitem isolar, organizar e reaproveitar blocos de código sem a necessidade de duplicar lógicas idênticas.</label>
+                <label><input type="radio" name="q8" value="C"> Servem unicamente para mostrar mensagens com pop-ups de alerta na tela do usuário.</label>
+            </div>
+
+            <button type="submit" id="submit-btn">Enviar Respostas</button>
+        </form>
+
+        <div id="result-box" class="result-container hidden">
+            <h2>Resultado Final</h2>
+            <p id="score-text"></p>
+            <button type="button" onclick="window.location.reload()">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
